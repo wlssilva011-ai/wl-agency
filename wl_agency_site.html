@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WL Agency — criação de sites e lojas virtuais para pequenos negócios.">
+  <title>WL Agency | Sua presença digital começa aqui</title>
+  <style>
+    :root{--bg:#080b12;--panel:#111725;--panel2:#151e2e;--text:#f5f7fb;--muted:#a8b2c4;--line:#263246;--accent:#75e0c0;--accent2:#9c8cff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,11,18,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:1.2rem;font-weight:850;letter-spacing:-.05em}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:26px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;background:var(--accent);color:#07130f;font-weight:800;border:0;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .hero{padding:92px 0 78px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(117,224,192,.13),transparent 68%);right:-170px;top:-170px;pointer-events:none}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--accent);font-weight:750;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+    h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.065em;max-width:820px;margin:20px 0}
+    h1 em{font-style:normal;color:var(--accent)}.lead{max-width:620px;color:var(--muted);font-size:1.12rem}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.mini{display:flex;gap:22px;flex-wrap:wrap;margin-top:48px;color:var(--muted);font-size:.9rem}.mini strong{color:var(--text)}
+    section{padding:72px 0}.section-head{max-width:650px;margin-bottom:32px}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em;line-height:1.1;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:25px}.card h3{margin:0 0 8px;font-size:1.2rem}.card p{color:var(--muted);margin:0}.number{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:rgba(117,224,192,.12);color:var(--accent);font-weight:850;margin-bottom:18px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}.price-card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:27px;display:flex;flex-direction:column}.price-card.featured{border-color:var(--accent);background:linear-gradient(160deg,rgba(117,224,192,.10),var(--panel) 48%)}.tag{font-size:.72rem;color:#07130f;background:var(--accent);padding:5px 10px;border-radius:999px;font-weight:850;align-self:flex-start;margin-bottom:13px}.price-card h3{margin:0;font-size:1.25rem}.price{font-size:2.7rem;font-weight:900;letter-spacing:-.06em;margin:10px 0 0}.price small{font-size:.85rem;color:var(--muted);font-weight:500;letter-spacing:0}.desc{color:var(--muted);font-size:.92rem;margin:4px 0 18px}.features{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:10px;color:#dce4ee;font-size:.93rem}.features li:before{content:"✓";color:var(--accent);font-weight:900;margin-right:9px}.price-card .btn{margin-top:auto}.fineprint{font-size:.82rem;color:var(--muted);margin-top:18px}
+    .portfolio{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project{min-height:190px;border-radius:20px;padding:25px;border:1px solid var(--line);background:linear-gradient(135deg,#18243a,#101622);display:flex;flex-direction:column;justify-content:space-between}.project .label{color:var(--accent);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.project h3{font-size:1.6rem;margin:8px 0 4px}.project p{color:var(--muted);margin:0;max-width:400px}
+    .cta{border:1px solid rgba(117,224,192,.3);border-radius:24px;padding:clamp(25px,5vw,48px);background:radial-gradient(circle at top right,rgba(117,224,192,.13),transparent 45%),var(--panel)}
+    .cta h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.05em;margin:12px 0}.cta p{color:var(--muted);max-width:600px}
+    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:800px){.cards,.pricing{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.navlinks{display:none}.hero{padding:70px 0 55px}section{padding:55px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#inicio">WL<span>.</span> AGENCY</a>
+      <div class="navlinks"><a href="#servicos">Serviços</a><a href="#planos">Planos</a><a href="#portfolio">Projetos</a><a href="#contato">Contato</a></div>
+      <a class="btn ghost" href="#planos">Ver planos</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="eyebrow">✦ Soluções digitais para pequenos negócios</div>
+      <h1>Sua empresa merece uma presença <em>digital de verdade.</em></h1>
+      <p class="lead">Criamos sites e lojas virtuais com visual moderno para ajudar pequenos negócios a apresentar seus produtos, divulgar seus serviços e receber pedidos pela internet.</p>
+      <div class="hero-actions"><a class="btn" href="#planos">Conhecer os planos</a><a class="btn ghost" href="#contato">Solicitar orçamento</a></div>
+      <div class="mini"><span><strong>Design moderno</strong> e responsivo</span><span><strong>Planos acessíveis</strong> de lançamento</span><span><strong>Atendimento próximo</strong></span></div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">O que fazemos</div><h2>Uma solução digital para cada negócio.</h2><p>Do primeiro site à apresentação de um catálogo de produtos, a WL Agency ajuda sua marca a dar o próximo passo.</p></div>
+      <div class="cards">
+        <article class="card"><div class="number">01</div><h3>Sites de apresentação</h3><p>Mostre quem você é, o que oferece, seus diferenciais e como seus clientes podem entrar em contato.</p></article>
+        <article class="card"><div class="number">02</div><h3>Lojas e catálogos virtuais</h3><p>Organize seus produtos em categorias, apresente fotos e preços e facilite o recebimento de pedidos.</p></article>
+        <article class="card"><div class="number">03</div><h3>Páginas de divulgação</h3><p>Destaque um serviço, lançamento ou promoção em uma página objetiva, bonita e fácil de acessar.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Planos de lançamento</div><h2>Seu próximo passo cabe no seu orçamento.</h2><p>Escolha o pacote que combina com o momento do seu negócio. Os valores abaixo são promocionais para criação dos projetos descritos.</p></div>
+      <div class="pricing">
+        <article class="price-card">
+          <h3>Essencial</h3><div class="price">R$ 25<small>,00</small></div><p class="desc">Para começar a apresentar sua empresa.</p>
+          <ul class="features"><li>Página de apresentação</li><li>Informações do negócio</li><li>Botão de contato</li><li>Layout adaptado ao celular</li></ul>
+          <a class="btn ghost" href="#contato">Tenho interesse</a>
+        </article>
+        <article class="price-card">
+          <div class="tag">Mais recursos</div><h3>Profissional</h3><div class="price">R$ 50<small>,00</small></div><p class="desc">Para divulgar melhor seus serviços.</p>
+          <ul class="features"><li>Site com seções personalizadas</li><li>Galeria de imagens</li><li>Apresentação de serviços</li><li>Contato pelo WhatsApp</li><li>Layout adaptado ao celular</li></ul>
+          <a class="btn" href="#contato">Tenho interesse</a>
+        </article>
+        <article class="price-card">
+          <h3>Loja Virtual</h3><div class="price">R$ 60<small>,00</small></div><p class="desc">Para apresentar produtos e receber pedidos.</p>
+          <ul class="features"><li>Catálogo de produtos</li><li>Fotos, nomes e preços</li><li>Carrinho ou lista de pedidos</li><li>Pedidos direcionados ao WhatsApp</li><li>Layout personalizado</li></ul>
+          <a class="btn ghost" href="#contato">Tenho interesse</a>
+        </article>
+      </div>
+      <p class="fineprint">Valores promocionais de criação inicial. Domínio, hospedagem, manutenção e integrações com plataformas de pagamento não estão incluídos e podem ter custos adicionais. A loja virtual deste plano recebe pedidos pelo WhatsApp; pagamento online pode ser orçado separadamente.</p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Projetos demonstrativos</div><h2>Ideias que ganham forma.</h2><p>Conheça exemplos de segmentos que podem receber uma presença digital feita sob medida.</p></div>
+      <div class="portfolio">
+        <article class="project"><div><div class="label">Loja demonstrativa</div><h3>Cellshop</h3><p>Exemplo de catálogo virtual para capas e acessórios de celular.</p></div><span>Comércio de acessórios ↗</span></article>
+        <article class="project"><div><div class="label">Catálogo demonstrativo</div><h3>Beleza & cuidado</h3><p>Uma vitrine digital para apresentar produtos, categorias e ofertas.</p></div><span>Cosméticos e perfumaria ↗</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <div class="cta">
+        <div class="eyebrow">Vamos tirar sua ideia do papel?</div>
+        <h2>Seu negócio pode estar online.</h2>
+        <p>Conte um pouco sobre sua empresa e o que você precisa. A WL Agency pode ajudar a encontrar o formato ideal para apresentar sua marca na internet.</p>
+        <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Encontrar a WL Agency no Instagram</a>
+        <p class="fineprint">Antes de divulgar, substitua este botão pelo link do perfil oficial da WL Agency.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span><strong style="color:#f5f7fb">WL Agency</strong> · Criação de sites e lojas virtuais</span><span>© 2026 WL Agency. Todos os direitos reservados.</span></div></footer>
+</body>
+</html>
